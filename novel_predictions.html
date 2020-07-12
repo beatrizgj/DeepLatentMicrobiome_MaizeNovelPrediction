@@ -13114,7 +13114,7 @@ div#notebook {
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Import-libraries">Import libraries<a class="anchor-link" href="#Import-libraries">&#182;</a></h2>
+<h1 id="Prediction-of-Maize-rhizosphere-microbiome-in-novel-ecoystems">Prediction of Maize rhizosphere microbiome in novel ecoystems<a class="anchor-link" href="#Prediction-of-Maize-rhizosphere-microbiome-in-novel-ecoystems">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13184,7 +13184,7 @@ div#notebook {
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Novel-samples:-prediction-of-novel-ecosystems">Novel samples: prediction of novel ecosystems<a class="anchor-link" href="#Novel-samples:-prediction-of-novel-ecosystems">&#182;</a></h1>
+<h4 id="Introduce-environmental-features-values">Introduce environmental features values<a class="anchor-link" href="#Introduce-environmental-features-values">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13390,7 +13390,7 @@ div#notebook {
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Load-models">Load models<a class="anchor-link" href="#Load-models">&#182;</a></h4>
+<h4 id="Load-model-...">Load model ...<a class="anchor-link" href="#Load-model-...">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13432,7 +13432,7 @@ div#notebook {
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Compute-new-predictions">Compute new predictions<a class="anchor-link" href="#Compute-new-predictions">&#182;</a></h4>
+<h4 id="Compute-new-predictions-...">Compute new predictions ...<a class="anchor-link" href="#Compute-new-predictions-...">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13526,6 +13526,24 @@ div#notebook {
 
   
 
+  <div class="nbinteract-hide_in
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">Rpush</span> temp rain age
+<span class="c1">#nbi:hide_in</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
   <div class="
       cell border-box-sizing code_cell rendered">
     <div class="input">
@@ -13534,40 +13552,6 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
 <span class="nf">source</span><span class="p">(</span><span class="s">&#39;Src/functionsR_plotMicrobiome.r&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">Rpush</span> temp rain age
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
 <span class="n">physeq_pred</span> <span class="o">=</span> <span class="nf">build_physeq_object_otu_tax</span><span class="p">(</span><span class="s">&#39;abundances_predicted_otus_novel_features.tsv&#39;</span><span class="p">,</span><span class="s">&#39;tax_table_cleanNames.csv&#39;</span><span class="p">)</span>
 <span class="nf">plot_taxa_agg</span><span class="p">(</span><span class="n">physeq_pred</span><span class="p">,</span><span class="s">&quot;Class&quot;</span><span class="p">,</span><span class="n">temp</span><span class="p">,</span><span class="n">rain</span><span class="p">,</span><span class="n">age</span><span class="p">)</span>
 </pre></div>
@@ -13594,23 +13578,6 @@ div#notebook {
 
 </div>
 
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
 
