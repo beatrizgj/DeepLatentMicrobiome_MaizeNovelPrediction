@@ -1,3 +1,4 @@
+install.packages("BiocManager")
 source('http://bioconductor.org/biocLite.R')
 biocLite('phyloseq')
 install.packages("biomformat")
