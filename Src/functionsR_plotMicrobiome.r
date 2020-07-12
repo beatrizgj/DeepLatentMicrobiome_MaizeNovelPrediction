@@ -1,8 +1,10 @@
-library(phyloseq)
-library(biomformat)
-library(ggplot2)
-library(plyr)
-library(dplyr)
+suppressPackageStartupMessages({
+  library(phyloseq)
+  library(biomformat)
+  library(ggplot2)
+  library(plyr)
+  library(dplyr)
+})
 
 # Author: Beatriz Garcia-Jimenez
 build_physeq_object_otu_tax <- function(fotu,ftax){
