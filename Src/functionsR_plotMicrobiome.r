@@ -2,8 +2,8 @@ suppressPackageStartupMessages({
   library(phyloseq)
   library(biomformat)
   library(ggplot2)
-  library(plyr)
-  library(dplyr)
+  #library(plyr)
+  #library(dplyr)
 })
 
 # Author: Beatriz Garcia-Jimenez
@@ -25,16 +25,15 @@ build_physeq_object_otu_tax <- function(fotu,ftax){
 plot_taxa_agg <- function (phy, tax.rank, temp, rain, age){
   #color according to tax_rank
   if (tax.rank != "Species") {
-    #group data according to tax rank (as a parameter)
-    phy.rank <- phy %>% 
-      tax_glom(taxrank = tax.rank)
+    phy.rank=tax_glom(phy,tax.rank)
   }else{
     phy.rank=phy
   }
   
-  phy.rank.df=phy.rank %>%
-    psmelt()
- 
+  #phy.rank.df=phy.rank %>%
+  #  psmelt()
+  phy.rank.df=psmelt(phy.rank)
+  
   #plot
   p <- ggplot(phy.rank.df, aes(x = phy.rank.df$Sample, y = Abundance, fill = phy.rank.df[,tax.rank]))+
     geom_bar(aes(), stat="identity", position="fill") + 

@@ -1,8 +1,8 @@
-install.packages("BiocManager")
+BiocManager::install(version = "3.11")
 source('http://bioconductor.org/biocLite.R')
 biocLite('phyloseq')
 install.packages("biomformat")
 install.packages("ggplot2")
-install.packages("plyr")
-install.packages("dplyr")
+#install.packages("plyr")
+#install.packages("dplyr")
 
